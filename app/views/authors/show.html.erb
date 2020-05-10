@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= "#{@author.first_name} #{@author.last_name}" %></h1>
+  <p><%= "#{@author.bio}" %></p>
+    <p><%= link_to "Edit", edit_author_path(@author) %></p>
+    <p><%= link_to "Delete", author_path(@author), method: :delete, data: {:confirm => "Tem certeza?" } %></p>
+    <p><%= link_to "All Authors", authors_path  %></p>
+</div>
