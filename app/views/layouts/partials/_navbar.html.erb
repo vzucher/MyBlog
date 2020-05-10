@@ -1,0 +1,18 @@
+<div class="container d-flex cl-12 justify-content-end">
+    <div>
+      <%= link_to "Home", root_path %>
+    </div>
+
+    <div>
+      <p><%= link_to "Sign Up", new_author_registration_path %></p>
+    </div>
+
+    <div>
+      <p><%= link_to "Log In", new_author_session_path(@author)  %></p>
+    </div>
+
+    <div>
+      <p><%= link_to "Log Out", destroy_author_session_path(@author), method: :delete %></p>
+    </div>
+
+</div>
