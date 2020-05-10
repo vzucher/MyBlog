@@ -1,0 +1,6 @@
+<%= simple_form_for [@author, post] do |f| %>
+<%= f.input :title %>
+<%= f.input :text, as: :text %>
+<%= f.input :image, as: :file %>
+<%= f.button :submit, "Submit", class: "btn btn-primary" %>
+<% end %>
