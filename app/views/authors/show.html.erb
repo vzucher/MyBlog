@@ -10,7 +10,7 @@
 <div class="container">
   <h2><%= "#{@author.first_name}'s Posts" %></h2>
     <% @author.posts.each do |post| %>
-    <%= post.title %>
+    <%= link_to "#{post.title}", post_path(post) %>
     <%= post.text %>
     <% end %>
 </div>

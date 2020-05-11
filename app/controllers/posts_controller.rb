@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
+  before_action :set_author, only: %i[new create]
   def index
     @posts = Post.all
   end
@@ -8,15 +9,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @author = Author.find(params[:author_id])
   end
 
   def create
-    @author = Author.find(params[:author_id])
     @post = Post.new(post_params)
     @post.author = @author
     @post.save
-    redirect_to author_path(@author)
+    redirect_to post_path(@post)
   end
 
   def edit; end
@@ -27,14 +26,19 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    author = @post.author
     @post.destroy
-    redirect_to posts_path
+    redirect_to author_path(author)
   end
 
   private
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_author
+    @author = Author.find(params[:author_id])
   end
 
   def post_params
