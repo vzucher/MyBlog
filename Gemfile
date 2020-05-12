@@ -60,3 +60,6 @@ gem 'simple_form'
 
 # AUTHENTICATION
 gem 'devise'
+
+# ENV FILE
+gem 'dotenv-rails', groups: [:development, :test]
