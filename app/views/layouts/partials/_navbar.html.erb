@@ -1,21 +1,22 @@
-<div class="container d-flex cl-12 justify-content-end">
-    <div>
+<div class="container d-flex cl-12 justify-content-end" id="navbar">
+    <h1 id="title">Smart Hacks</h1>
+    <div class="nav-element">
       <%= link_to "Home", root_path %>
     </div>
 
-    <div>
+    <div class="nav-element">
       <p><%= link_to "New Author", new_author_path %></p>
     </div>
 
-    <div>
+    <div class="nav-element">
       <p><%= link_to "Sign Up", new_author_registration_path %></p>
     </div>
 
-    <div>
+    <div class="nav-element">
       <p><%= link_to "Sing In", new_author_session_path(@author)  %></p>
     </div>
 
-    <div>
+    <div class="nav-element">
       <p><%= link_to "Log Out", destroy_author_session_path(@author), method: :delete %></p>
     </div>
 

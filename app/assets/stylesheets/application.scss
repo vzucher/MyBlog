@@ -14,3 +14,8 @@
  *= require_self
  */
 @import "bootstrap/scss/bootstrap"; /* picks it up in node_modules! */
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap");
+
+ul, li {
+  list-style: none;
+}
