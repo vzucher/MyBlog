@@ -63,3 +63,6 @@ gem 'devise'
 
 # ENV FILE
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Cloudinary
+gem 'cloudinary', '~> 1.12.0'
