@@ -1,14 +1,19 @@
-<div class="container" id="author-card">
-  <h1><%= "#{@author.first_name} #{@author.last_name}" %></h1>
-  <p><%= "#{@author.bio}" %></p>
-  <ul class="d-flex flex-row">
+<div class="container">
+  <div id="author-card">
+    <%= cl_image_tag @author.thumbnail.key, gravity: :face, height: 80, width: 80, crop: :thumb, id: "thumb" %>
+    <h1 id="author-name"><%= "#{@author.first_name} #{@author.last_name}" %></h1>
+    <p id="author-bio"><%= "#{@author.bio}" %></p>
+    <div class="btn btn-primary">
 
-    <li><%= link_to "Create a Post", new_author_post_path(@author) %></li>
-    <li><%= link_to "Edit", edit_author_path(@author) %></li>
-    <li><%= link_to "Delete", author_path(@author), method: :delete, data: {:confirm => "Tem certeza?" } %></li>
-    <li><%= link_to "All Authors", authors_path  %></li>
+      <%= link_to "Create a Post", new_author_post_path(@author), class: "new-post" %>
+    </div>
+    <ul class="d-flex flex-row justify-content-center" id="author-crud">
+      <li><%= link_to "Edit", edit_author_path(@author) %></li>
+      <li><%= link_to "Delete", author_path(@author), method: :delete, data: {:confirm => "Tem certeza?" } %></li>
+      <li><%= link_to "All Authors", authors_path  %></li>
 
-  </ul>
+    </ul>
+  </div>
 </div>
 
 <div class="container">

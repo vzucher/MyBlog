@@ -1,0 +1,44 @@
+#author-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 70%;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+#author-crud {
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#author-name {
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+#author-bio {
+  padding-top: 5px;
+}
+
+#thumb {
+  border-radius: 50px;
+}
+
+.new-post {
+  font-color: white;
+  font-weight: bold;
+}
+
+// .author-info {
+//   display: flex;
+//   align-items: center;
+// }
